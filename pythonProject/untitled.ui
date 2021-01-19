@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>372</width>
-    <height>264</height>
+    <width>409</width>
+    <height>335</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,6 +23,9 @@
          <string>AlignLeft</string>
         </property>
         <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
          <bool>false</bool>
         </property>
         <property name="autoExclusive">
@@ -38,6 +41,9 @@
         <property name="text">
          <string>Center</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
         <property name="autoExclusive">
          <bool>true</bool>
         </property>
@@ -50,6 +56,12 @@
        <widget class="QPushButton" name="pushBtn_alignright">
         <property name="text">
          <string>AlignRight</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -72,19 +84,66 @@
         <property name="text">
          <string>Bold</string>
         </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushBtn_underline">
-        <property name="text">
-         <string>Italic</string>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushBtn_italic">
         <property name="text">
+         <string>Italic</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushBtn_underline">
+        <property name="text">
          <string>Underline</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QPushButton" name="pushBtn_bigger">
+        <property name="text">
+         <string>Bigger</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushBtn_smallar">
+        <property name="text">
+         <string>Smallar</string>
         </property>
        </widget>
       </item>
@@ -120,16 +179,25 @@
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox_enabled">
-        <property name="text">
-         <string>Enabled</string>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
         </property>
-       </widget>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox_clearbtnenabled">
+       <widget class="QCheckBox" name="checkBox_enabled">
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
         <property name="text">
-         <string>ClearBtnEnabled</string>
+         <string>Enabled</string>
         </property>
        </widget>
       </item>
@@ -138,6 +206,37 @@
     <item>
      <widget class="QTextEdit" name="textEdit"/>
     </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QPushButton" name="pushBtn_clear">
+        <property name="text">
+         <string>Clear</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushBtn_exit">
+        <property name="text">
+         <string>Exit</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -145,7 +244,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>372</width>
+     <width>409</width>
      <height>23</height>
     </rect>
    </property>
@@ -153,5 +252,70 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushBtn_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>371</x>
+     <y>286</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushBtn_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>56</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushBtn_bigger</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>zoomIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>126</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>55</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushBtn_smallar</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>zoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>367</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>354</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
