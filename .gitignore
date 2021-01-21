@@ -4,4 +4,4 @@ __pycache__/
 build/
 main.spec
 dist/
-.DS_Store
+\.DS_Store
