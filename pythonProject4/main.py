@@ -36,6 +36,7 @@ class MyApp(QMainWindow):
             self.sec = self.sec % 60
         if self.hour:
             self.min = self.min % 60
+        self.hour = self.hour % 24
 
         self.ui.lcdNumber_sec.display(str(int(self.sec)))
         self.ui.lcdNumber_min.display(str(self.min))
