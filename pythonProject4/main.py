@@ -39,7 +39,7 @@ class MyApp(QMainWindow):
 
         self.ui.lcdNumber_sec.display(str(int(self.sec)))
         self.ui.lcdNumber_min.display(str(self.min))
-        self.ui.lcdNumber_min.display(str(self.hour))
+        self.ui.lcdNumber_hour.display(str(self.hour))
 
 
 if __name__ == "__main__":
