@@ -101,7 +101,20 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="text">
+            <string>1000</string>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+           <property name="cursorMoveStyle">
+            <enum>Qt::LogicalMoveStyle</enum>
+           </property>
+          </widget>
          </item>
          <item>
           <spacer name="horizontalSpacer_4">
