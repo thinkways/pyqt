@@ -9,15 +9,6 @@ class MyApp(QWidget):
         super(MyApp, self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-<<<<<<< HEAD
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    demoApp = MyApp()
-    demoApp.show()
-    sys.exit(app.exec_())
-=======
         self.ui.lineEdit.setInputMask("99:99")
 
     def on_pushButton_readTime_clicked(self):
@@ -54,4 +45,3 @@ if __name__ == '__main__':
     demoApp = MyApp()
     demoApp.show()
     sys.exit(app.exec_())
->>>>>>> 697e897a2325529d34e4bf5f35e621b9ef72c7ab
