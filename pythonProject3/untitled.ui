@@ -6,13 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>720</width>
     <height>360</height>
+=======
+    <width>667</width>
+    <height>333</height>
+>>>>>>> 697e897a2325529d34e4bf5f35e621b9ef72c7ab
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+<<<<<<< HEAD
   <layout class="QHBoxLayout" name="horizontalLayout_3">
    <item>
     <widget class="QGroupBox" name="groupBox">
@@ -167,6 +173,153 @@
     </widget>
    </item>
   </layout>
+=======
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>333</width>
+     <height>220</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Date-Time</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pushButton_readTime">
+      <property name="text">
+       <string>ReadTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>ShowTimeTxt</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" rowspan="2">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Time</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buddy">
+       <cstring>timeEdit</cstring>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" rowspan="2">
+     <widget class="QTimeEdit" name="timeEdit"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>SetTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" rowspan="2">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Date</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buddy">
+       <cstring>dateEdit</cstring>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1" rowspan="2">
+     <widget class="QDateEdit" name="dateEdit"/>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLineEdit" name="lineEdit_2"/>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>SetTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" rowspan="2">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Date-Time</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buddy">
+       <cstring>dateTimeEdit</cstring>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1" rowspan="2">
+     <widget class="QDateTimeEdit" name="dateTimeEdit"/>
+    </item>
+    <item row="5" column="2">
+     <widget class="QLineEdit" name="lineEdit_3"/>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="text">
+       <string>SetTime</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>348</x>
+     <y>9</y>
+     <width>268</width>
+     <height>257</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Calender</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Selected Date</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_4"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QCalendarWidget" name="calendarWidget"/>
+    </item>
+   </layout>
+  </widget>
+>>>>>>> 697e897a2325529d34e4bf5f35e621b9ef72c7ab
  </widget>
  <resources/>
  <connections/>
