@@ -20,6 +20,8 @@ class MyApp(QMainWindow):
 
     def on_pushBtn_start_clicked(self):
         self.timer.start()
+        self.sec, self.min, self.hour = 0, 0, 0
+        self.timer.setInterval(int(self.ui.lineEdit.text()))
         self.ui.pushBtn_start.setEnabled(False)
         self.ui.pushBtn_stop.setEnabled(True)
 
@@ -41,6 +43,7 @@ class MyApp(QMainWindow):
         self.ui.lcdNumber_sec.display(str(int(self.sec)))
         self.ui.lcdNumber_min.display(str(self.min))
         self.ui.lcdNumber_hour.display(str(self.hour))
+        self.statusBar().showMessage("hello")
 
 
 if __name__ == "__main__":
