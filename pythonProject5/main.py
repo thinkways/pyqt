@@ -13,6 +13,7 @@ class MyApp(QWidget):
         self.ui.pushBtn_clear.clicked.connect(self.ui.comboBox.clear)
         self.ui.checkBox_editable.toggled.connect(self.ui.comboBox.setEditable)
         self.ui.comboBox.currentIndexChanged[str].connect(self.ui.lineEdit.setText)
+        self.ui.comboBox_withUserData.currentIndexChanged[str].connect(self.do_setLineditText)
         self.ui.pushBtn_initCplex.clicked.connect(self.do_initComplex)
 
     def do_initSimple(self):
@@ -26,6 +27,10 @@ class MyApp(QWidget):
         self.ui.comboBox_withUserData.clear()
         for key, value in info.items():
             self.ui.comboBox_withUserData.addItem(key, value)
+
+    def do_setLineditText(self, text):
+        value = self.ui.comboBox_withUserData.currentData()
+        self.ui.lineEdit.setText(text + str(value))
 
 
 if __name__ == "__main__":
