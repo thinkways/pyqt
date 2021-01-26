@@ -14,14 +14,14 @@ class MyApp(QMainWindow):
         self.timer.stop()
         self.timer.setInterval(1000)
         self.timer.timeout.connect(self.update_time_info)
+        self.ui.pushBtn_set.clicked.connect(self.do_setInterval)
         self.sec = 0
         self.min = 0
         self.hour = 0
 
     def on_pushBtn_start_clicked(self):
-        self.timer.start()
         self.sec, self.min, self.hour = 0, 0, 0
-        self.timer.setInterval(int(self.ui.lineEdit.text()))
+        self.do_setInterval()
         self.ui.pushBtn_start.setEnabled(False)
         self.ui.pushBtn_stop.setEnabled(True)
 
@@ -29,6 +29,11 @@ class MyApp(QMainWindow):
         self.timer.stop()
         self.ui.pushBtn_stop.setEnabled(False)
         self.ui.pushBtn_start.setEnabled(True)
+
+    def do_setInterval(self):
+        self.timer.stop()
+        self.timer.setInterval(int(self.ui.lineEdit.text()))
+        self.timer.start()
 
     def update_time_info(self):
         self.sec = self.sec + self.timer.interval() / 1000
